@@ -7,9 +7,9 @@ function Button({ variant = "primary", title }: Props) {
   function getBackgroundColorClassName() {
     switch (variant) {
       case "primary":
-        return "bg-gray-900"
+        return "bg-gray-800"
       case "secondary":
-        return "bg-gray-100"
+        return "bg-gray-200"
       default:
         throw new Error("Unknown variant.")
     }
@@ -18,9 +18,9 @@ function Button({ variant = "primary", title }: Props) {
   function getTextColorClassName() {
     switch (variant) {
       case "primary":
-        return "text-gray-100"
+        return "text-gray-200"
       case "secondary":
-        return "text-black"
+        return "text-gray-800"
       default:
         throw new Error("Unknown variant.")
     }
@@ -28,7 +28,7 @@ function Button({ variant = "primary", title }: Props) {
 
   return (
     <button
-      className={`w-64 py-3 px-3 rounded bg-gray-500 text-sm ${getBackgroundColorClassName()} ${getTextColorClassName()} font-medium opacity-75`}
+      className={`w-64 py-3 px-3 rounded text-sm ${getBackgroundColorClassName()} ${getTextColorClassName()} font-medium opacity-100`}
     >
       {title}
     </button>

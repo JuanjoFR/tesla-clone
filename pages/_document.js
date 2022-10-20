@@ -8,7 +8,7 @@ function Document() {
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
