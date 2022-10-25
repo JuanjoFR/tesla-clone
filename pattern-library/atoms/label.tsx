@@ -3,7 +3,7 @@ interface Props {
 }
 
 function Label({ text }: Props) {
-  return <p className="text-sm">{text}</p>
+  return <p className="text-xs">{text}</p>
 }
 
 export default Label
