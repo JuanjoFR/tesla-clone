@@ -11,7 +11,7 @@ function Header() {
           fill="currentColor"
         ></path>
       </svg>
-      <ol className="flex">
+      <ol className="hidden xl:flex">
         <li>
           <a className="cursor-pointer p-4">Model S</a>
         </li>
@@ -28,7 +28,7 @@ function Header() {
           <a className="cursor-pointer p-4">Charging</a>
         </li>
       </ol>
-      <ol className="flex">
+      <ol className="hidden xl:flex">
         <li>
           <a className="cursor-pointer p-4">Support</a>
         </li>
@@ -39,6 +39,7 @@ function Header() {
           <a className="cursor-pointer p-4">Menu</a>
         </li>
       </ol>
+      <a className="xl:hidden cursor-pointer">Menu</a>
     </header>
   )
 }

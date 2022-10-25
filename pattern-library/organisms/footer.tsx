@@ -9,16 +9,16 @@ function Footer() {
           <a className="cursor-pointer p-2">Privacy & Legal</a>
         </li>
         <li>
-          <a className="cursor-pointer p-2">Contact</a>
+          <a className="cursor-pointer p-2 hidden sm:inline">Contact</a>
         </li>
         <li>
-          <a className="cursor-pointer p-2">Careers</a>
+          <a className="cursor-pointer p-2 hidden sm:inline">Careers</a>
         </li>
         <li>
-          <a className="cursor-pointer p-2">News</a>
+          <a className="cursor-pointer p-2 hidden sm:inline">News</a>
         </li>
         <li>
-          <a className="cursor-pointer p-2">Locations</a>
+          <a className="cursor-pointer p-2 hidden sm:inline">Locations</a>
         </li>
       </ol>
     </footer>

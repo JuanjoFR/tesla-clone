@@ -1,9 +1,13 @@
 interface Props {
-  text: String
+  text?: String
 }
 
 function Label({ text }: Props) {
-  return <p className="text-xs">{text}</p>
+  if (text) {
+    return <p className="text-xs mb-6 px-2">{text}</p>
+  }
+
+  return <div className="mb-8"></div>
 }
 
 export default Label
