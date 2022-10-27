@@ -1,25 +1,9 @@
-import fetchAllFeaturedSections from "../features/featured-sections/fetch-all"
+import { useGetFeaturedSectionsQuery } from "../features/featured-sections/api"
 import HomeTemplate from "../pattern-library/templates/home"
-import { dehydrate, QueryClient, useQuery } from "@tanstack/react-query"
 import Head from "next/head"
 
-export async function getStaticProps() {
-  const queryClient = new QueryClient()
-
-  await queryClient.prefetchQuery(
-    ["featuredSections"],
-    fetchAllFeaturedSections
-  )
-
-  return {
-    props: {
-      dehydratedState: dehydrate(queryClient)
-    }
-  }
-}
-
 function Home() {
-  const { data } = useQuery(["featuredSections"], fetchAllFeaturedSections)
+  const { isSuccess, data } = useGetFeaturedSectionsQuery()
 
   return (
     <div>
@@ -29,9 +13,11 @@ function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="font-montserrat">
-        <HomeTemplate sections={data} />
-      </div>
+      {isSuccess ? (
+        <div className="font-montserrat">
+          <HomeTemplate sections={data} />
+        </div>
+      ) : undefined}
     </div>
   )
 }

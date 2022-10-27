@@ -1,26 +1,15 @@
+import { store } from "../library/store"
 import "../styles/globals.css"
-import {
-  Hydrate,
-  QueryClient,
-  QueryClientProvider,
-  DehydratedState
-} from "@tanstack/react-query"
 import type { AppProps } from "next/app"
 import React from "react"
+import { Provider } from "react-redux"
 
-function MyApp({
-  Component,
-  pageProps
-}: AppProps<{ dehydratedState: DehydratedState }>) {
-  const [queryClient] = React.useState(() => new QueryClient())
-
+function Application({ Component, pageProps }: AppProps) {
   return (
-    <QueryClientProvider client={queryClient}>
-      <Hydrate state={pageProps.dehydratedState}>
-        <Component {...pageProps} />
-      </Hydrate>
-    </QueryClientProvider>
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
   )
 }
 
-export default MyApp
+export default Application
