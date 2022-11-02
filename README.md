@@ -1,5 +1,7 @@
 # Tesla Clone
 
+https://user-images.githubusercontent.com/978229/199475748-acd1483d-a631-4e65-8783-67b2a9b25320.mov
+
 Project created to check the best way to set a clean integration between [Next.js], [RTK Query] and [Tailwind CSS] and test the Tailwind's scroll snap functionality by cloning a real project.
 
 It's also important to highlight the use of [Atomic Design] for the visual components structure.
