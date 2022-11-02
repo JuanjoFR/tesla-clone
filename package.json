@@ -1,5 +1,6 @@
 {
   "name": "tesla-clone",
+  "description": "Tesla Clone in Next.js, RTK Query and Tailwind CSS.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
